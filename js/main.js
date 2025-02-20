@@ -76,10 +76,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // GitHub'dan son sürüm bilgisini al
 const fetchLatestVersion = async () => {
     try {
-        const response = await fetch('https://api.github.com/repos/Knuclew/musikia/releases/latest');
-        const data = await response.json();
-        if (data.tag_name) {
-            document.querySelector('.version-badge strong').textContent = data.tag_name;
+        const response = await fetch('https://raw.githubusercontent.com/Knuclew/musikia/main/version.txt');
+        const version = await response.text();
+        if (version) {
+            const formattedVersion = `V${version.trim()}`;
+            document.querySelector('.version-badge strong').textContent = formattedVersion;
+            document.querySelector('.hero-badge .version-number').textContent = formattedVersion;
         }
     } catch (error) {
         console.error('Sürüm bilgisi alınamadı:', error);
