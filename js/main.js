@@ -76,7 +76,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // GitHub'dan son sürüm bilgisini al
 const fetchLatestVersion = async () => {
     try {
-        const response = await fetch('https://api.github.com/repos/musikiaapp/musikia/releases/latest');
+        const response = await fetch('https://api.github.com/repos/Knuclew/musikia/releases/latest');
         const data = await response.json();
         if (data.tag_name) {
             document.querySelector('.version-badge strong').textContent = data.tag_name;
