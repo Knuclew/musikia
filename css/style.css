@@ -450,6 +450,7 @@ nav {
     text-align: center;
     position: relative;
     overflow: hidden;
+    margin-bottom: 0;
 }
 
 .download::before {
@@ -506,12 +507,18 @@ nav {
 .download-area {
     max-width: 500px;
     margin: 0 auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     animation: fadeUp 1s ease-out 0.9s backwards;
 }
 
 .download-btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
     background: var(--gradient-secondary);
     color: var(--dark-bg);
@@ -525,6 +532,8 @@ nav {
     overflow: hidden;
     transition: all 0.3s ease;
     box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+    width: 100%;
+    max-width: 400px;
 }
 
 .download-btn::before {
@@ -562,6 +571,7 @@ nav {
     justify-content: center;
     gap: 2.5rem;
     margin-top: 2rem;
+    flex-wrap: wrap;
 }
 
 .info-item {
@@ -767,6 +777,7 @@ footer {
     padding: 6rem 2rem 2rem;
     position: relative;
     overflow: hidden;
+    margin-top: 0;
 }
 
 footer::before {
