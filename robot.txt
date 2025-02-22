@@ -1,3 +1,4 @@
 index html 31 106
+version txt
 apk musikia
 musikia build.gradle yaml versioncode+1 -
